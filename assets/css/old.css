@@ -1,16 +1,16 @@
 :root {
         --main-bg-color: ;
-        --container-bg-color: rgba(0, 0, 0, 0.7);
+        --container-bg-color: rgba(15, 15, 15, 0.7);
         --badge-fg-color: #fff;
         --badge-bg-color: #034d54;
 }
 
-/* @font-face {
+@font-face {
         font-family: 'Share Tech Mono';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url("fonts/sharetechmono.ttf") format('truetype');
+        src: url("../fonts/sharetechmono.ttf") format('truetype');
 }
 
 @font-face {
@@ -18,8 +18,8 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url("fonts/titilliumweb.ttf") format('truetype');
-} */
+        src: url("../fonts/titilliumweb.ttf") format('truetype');
+}
 
 html, body, main {
         height: 100%;
@@ -28,11 +28,12 @@ html, body, main {
         color: #fff;
         background: transparent;
         font-family: 'Titillium Web', sans-serif;
-        font-size: 1rem;
+        font-size: 1.05rem;
 }
 
 body {
-        background-image: url("data/forest.jpg");
+        /* background-image: url("/img/background.jpg"); */
+        background-color: #202124;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -89,6 +90,10 @@ nav {
         padding: 0.2rem 0.6rem;
 }
 
+#navigation li a.highlight {
+        color: #50fa7b;
+}
+
 .container {
         display: flex;
         flex-flow: row wrap;
@@ -132,6 +137,7 @@ nav {
 
 .vertical-center {
         display: table-cell; vertical-align: middle;
+        
 }
 
 .container section a:hover {
@@ -206,7 +212,10 @@ img {
         font-size: 1.2em;
         box-shadow: 0 0 3rem rgba(0, 0, 0, 0.8);
         color: #fff;
+        background-position: center;
+        background-image: url("/img/banner-gradient.jpg");
 }
+
 
 @media only screen and (min-width : 768px) {
         section h2 {
@@ -270,4 +279,8 @@ strong {
     border-radius: 50%;
     overflow: hidden;
     /* border: 1px solid #b6b6b6; */
+}
+
+.mright{
+    margin-right: 20%;
 }

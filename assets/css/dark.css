@@ -10,7 +10,7 @@ body {
 }
 
 ::selection {
-  background: red;
+  background: rebeccapurple ;
   color: #fff;
   text-shadow: none;
 }
@@ -24,8 +24,19 @@ code {
   text-decoration: bold;
   padding: 0.1em 0.2em;
 }
+category:after {
+        content: ']';
+        color: var(--darkMaincolor);
+}
+
+category:before {
+        content: '[';
+        color: var(--darkMaincolor);
+}
+
+
 pre {
-  background-color: #272822;
+  background-color: #768d05;
   line-height: 1.4;
   overflow-x: auto;
   padding: 1em;
@@ -76,9 +87,24 @@ a {
   border-bottom: 3px solid var(--darkMaincolor);
   color: inherit;
 }
+
 a:hover {
   background-color: var(--darkMaincolor);
   color: black;
+}
+
+a.tag {
+  border-bottom: 0px;
+}
+
+a.tag:after {
+        content: ']';
+        color: var(--darkMaincolor);
+}
+
+a.tag:before {
+        content: '[';
+        color: var(--darkMaincolor);
 }
 
 .site-description a {

@@ -5,11 +5,22 @@
 <h1 class="page-title">All posts</h1>
 {{ end }}
 
+<h2>Writeups</h2>
+<ul class="writeups">
+	{{- range .Data.Pages -}}
+		{{- if and ((not (in (.Site.Params.excludedTypes | default (slice "page")) .Type))) (in .Params.tags "writeup") -}}
+		<li class="post">
+			<a href="{{ .RelPermalink }}">{{.Title}}</a> <span class="meta">{{ dateFormat ":date_medium" .Date }}</span>
+		</li>
+		{{- end -}}
+	{{- end -}}
+</ul>
+<h2>Misc</h2>
 <ul class="posts">
 	{{- range .Data.Pages -}}
-		{{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
+		{{- if and ((not (in (.Site.Params.excludedTypes | default (slice "page")) .Type))) (not (in .Params.tags "writeup")) -}}
 		<li class="post">
-			<a href="{{ .RelPermalink }}">{{.Title}}</a> <span class="meta">{{ dateFormat ":date_medium" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</span>
+			<a href="{{ .RelPermalink }}">{{.Title}}</a> <span class="meta">{{ dateFormat ":date_medium" .Date }}</span>
 		</li>
 		{{- end -}}
 	{{- end -}}

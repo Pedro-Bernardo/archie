@@ -10,8 +10,8 @@ body {
 }
 
 ::selection {
-  background: rebeccapurple ;
-  color: #fff;
+  background: lightblue ;
+  color: black;
   text-shadow: none;
 }
 
@@ -19,10 +19,17 @@ hr {
   border-top: 3px dotted blue;
 }
 code {
-  background-color: lightblue;
-  color: black;
+  /* background-color: rebeccapurple; */
+  background-color: rgb(50, 50, 50);
+  /* color: black; */
+  color: var(--darkMaincolor);
   text-decoration: bold;
   padding: 0.1em 0.2em;
+  padding-left:   6px;
+	padding-right:  6px;
+	padding-top:    0px;
+	padding-bottom: 0px;
+	border-radius: 6px;
 }
 category:after {
         content: ']';
@@ -187,4 +194,13 @@ a.tag:before {
   content: 'Markdown';
   background: royalblue;
   color: whitesmoke ;
+}
+
+
+.readmore {
+  border-bottom: 3px solid lightblue;
+}
+
+.readmore:hover {
+  border-bottom: 3px solid var(--darkMaincolor);
 }

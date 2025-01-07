@@ -28,7 +28,7 @@ html, body, main {
         color: #fff;
         background: transparent;
         font-family: 'Titillium Web', sans-serif;
-        font-size: 1.05rem;
+        font-size: 1rem;
 }
 
 body {
@@ -212,8 +212,10 @@ img {
         font-size: 1.2em;
         box-shadow: 0 0 3rem rgba(0, 0, 0, 0.8);
         color: #fff;
-        background-position: center;
+        background-position: right;
         background-image: url("/img/banner-gradient.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
 }
 
 
